@@ -1,0 +1,20 @@
+<h4>Accounts Filter</h4>
+<form action="/accounts" method="post">
+    <select name="account_type">
+      <option value="all">All</option>
+      <option value="student">Student</option>
+      <option value="teacher">Teacher</option>
+    </select><br><br>
+    <input type="submit" value="Submit">
+</form>
+<h4>List of accounts:</h4>
+{% for account in accounts %}
+  <ul>
+    <li><h2>ID: {{ account[0]}}</h2></li>
+      <ul>
+        <li>First name: {{ account[1]}}</li>
+        <li>Last name: {{ account[2]}}</li>
+        <li>Account Type: {{ account[4]}}</li>
+      </ul>
+  </ul>
+{% endfor %}

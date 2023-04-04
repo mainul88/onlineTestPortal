@@ -1,0 +1,16 @@
+<h2>Create Test</h2><br>
+
+<form action="/creates" method="post">
+    <input type="text" name="test_id" placeholder="Test ID"><br>
+    <input type="text" name="q1" placeholder="Question 1"><br>
+    <input type="text" name="q2" placeholder="Question 2"><br>
+    <input type="text" name="q3" placeholder="Question 3"><br>
+    <input type="text" name="q4" placeholder="Question 4"><br>
+    <input type="text" name="q5" placeholder="Question 5"><br>
+    <select name="creator">
+        {% for teacher in teachers %}
+        <option value="{{ teacher[0]}}">{{ teacher[0]}}</option>
+        {% endfor %}
+    </select><br><br>
+    <input type="submit" value="Submit">
+</form>
